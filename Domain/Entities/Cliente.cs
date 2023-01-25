@@ -1,9 +1,4 @@
 ﻿using Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
@@ -16,14 +11,16 @@ namespace Domain.Entities
         public string Telefono { get; set; }
         public string Email { get; set; }
         public string Direccion { get; set; }
-        public int Edad 
-        { 
+        public int Edad
+        {
             get
             {
-                if (this._edad <= 0) {
-                    this._edad = new DateTime(DateTime.Now.Subtract(this.FechaNacimiento).Ticks)
+                if (this._edad <= 0)
+                {
+                    this._edad = new DateTime(DateTime.Now.Subtract(this.FechaNacimiento).Ticks).Year - 1;
                 }
-             }
+                return this._edad;
+            }
         }
     }
 }
