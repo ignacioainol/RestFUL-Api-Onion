@@ -1,4 +1,7 @@
 using Application;
+using Persistance;
+using Shared;
+using WebAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,9 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationLayer();
+builder.Services.AddSharedInfraestructure(builder.Configuration);
+builder.Services.AddPersistenceInfraestructure(builder.Configuration);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddApiVersioningExtension();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -20,9 +26,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseErrorHandlerMiddleware();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
