@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebAPI.Controllers.v1
 {
     [ApiVersion("1.0")]
-    public class ClienteController : BaseApiController
+    public class ClientesController : BaseApiController
     {
         [HttpGet()]
         public async Task<IActionResult> Get([FromQuery] GetAllClientesParameters filter)
