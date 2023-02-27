@@ -16,9 +16,9 @@ namespace Application.Features.Clientes.Queries.GetAllClientes
         public int PageSize { get; set; }
         public int PageNumber { get; set; }
 
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
-        public string Apellido { get; set; }
+        public string? Apellido { get; set; }
 
         public class GetAllClientesQueryHandler : IRequestHandler<GetAllClientesQuery, PagedResponse<List<ClienteDto>>>
         {
