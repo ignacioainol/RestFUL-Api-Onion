@@ -7,6 +7,7 @@ namespace WebAPI.Controllers.v1
     public class ClienteController : BaseApiController
     {
         //POST api/<controller>
+        [HttpPost]
         public async Task<IActionResult> Post(CreateClienteCommand command)
         {
             return Ok(await Mediator.Send(command));
