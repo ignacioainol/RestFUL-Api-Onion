@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\crs80215\\source\\repos\\CourseRestApi\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\crs80215\\source\\repos\\CourseRestApi\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

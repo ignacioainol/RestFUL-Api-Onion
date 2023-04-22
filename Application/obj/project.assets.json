@@ -192,6 +192,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
       }
     }
   },
@@ -491,6 +501,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -498,6 +513,7 @@
       "Ardalis.Specification >= 6.1.0",
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Domain >= 1.0.0",
       "FluentValidation >= 11.5.2",
       "FluentValidation.DependencyInjectionExtensions >= 11.5.2",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0"
@@ -529,7 +545,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\crs80215\\source\\repos\\CourseRestApi\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\crs80215\\source\\repos\\CourseRestApi\\Domain\\Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

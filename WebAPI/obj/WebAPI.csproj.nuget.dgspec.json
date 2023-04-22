@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\crs80215\\source\\repos\\CourseRestApi\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\crs80215\\source\\repos\\CourseRestApi\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -334,6 +338,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
