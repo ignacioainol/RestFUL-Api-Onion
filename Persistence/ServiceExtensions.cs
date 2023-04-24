@@ -18,6 +18,9 @@ namespace Persistence
             #region Repositories
             services.AddTransient(typeof(IRepositoryAsync<>), typeof(MyRepositoryAsync<>));
             #endregion
+
+            #region Caching
+            #endregion
         }
     }
 }
