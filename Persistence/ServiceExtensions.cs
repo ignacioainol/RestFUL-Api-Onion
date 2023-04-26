@@ -20,6 +20,10 @@ namespace Persistence
             #endregion
 
             #region Caching
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = "localhost:6379";
+            });
             #endregion
         }
     }
